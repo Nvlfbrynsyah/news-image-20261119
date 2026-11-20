@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The World in One Image · Thursday 19 November 2026</title>
+<style>
+  :root{--navy:#16294d;--red:#c0392b;--paper:#faf6ee;--ink:#222;--line:#d8ceba}
+  *{box-sizing:border-box}
+  html,body{width:1024px;height:1024px;margin:0;overflow:hidden}
+  body{background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+  h1,h2,h3,p,figure{margin:0}
+  h1,h2,h3{font-family:Georgia,serif;color:var(--navy)}
+  .header{height:92px;display:grid;align-content:center;justify-items:center;gap:3px;background:#0f1e3a;border-bottom:3px solid #d4a437}
+  .header p{color:#e7b84c;font-size:14px;font-weight:800;letter-spacing:4px}
+  h1{color:#fff;font-size:44px;line-height:1.05}
+  .map-band{height:224px;background:#dceaf2;border-bottom:2px solid #a3bacb}
+  .map-band h2{height:34px;display:grid;place-items:center;font:800 14px Arial,Helvetica,sans-serif;letter-spacing:3px}
+  .map{display:block;width:1024px;height:188px}
+  .land{fill:#e6d9b8;stroke:#fffdf7;stroke-width:1.2;stroke-linejoin:round}
+  .map-label{fill:var(--navy);stroke:#f5f9fa;stroke-width:3px;stroke-linejoin:round;paint-order:stroke;font:bold 11px Arial,Helvetica,sans-serif}
+  .lead{fill:none;stroke:var(--navy);stroke-opacity:.44;stroke-width:1;stroke-linejoin:round}
+  .map-number{fill:#fff;font:bold 15px Arial,Helvetica,sans-serif;text-anchor:middle;dominant-baseline:central}
+  .hero{height:224px;display:grid;grid-template-columns:46fr 54fr;gap:18px;padding:11px 16px 9px}
+  .hero figure,.art{position:relative;min-width:0}
+  .hero figure svg{display:block;width:100%;height:184px;border-radius:3px}
+  figcaption{margin-top:4px;font-size:12px;font-style:italic;line-height:15px;color:#514e49}
+  .hero-text{display:grid;align-content:center;gap:6px;min-width:0}
+  .kicker{color:#a92f25;font-size:11px;font-weight:800;line-height:12px;letter-spacing:.8px}
+  .hero .kicker{font-size:14px;line-height:16px}
+  .hero h2{font-size:32px;line-height:1.02;text-wrap:balance}
+  .hero .summary{font-size:15px;line-height:19px}
+  .stats{display:flex;gap:6px;margin-top:2px}
+  .stats span,.fact{display:inline-block;font-size:11px;font-weight:800;line-height:13px;white-space:nowrap}
+  .stats span{padding:4px 8px;background:var(--navy);color:#fff;border-radius:2px}
+  .badge{position:absolute;inset:5px auto auto 6px;display:grid;place-items:center;min-width:27px;height:27px;padding:0 4px;border:2px solid white;border-radius:20px;background:var(--red);color:white;font-size:15px;font-weight:800;box-shadow:0 2px 3px #0f1e3a55}
+  .hero .badge{width:30px;height:30px}
+  .badge.group{font-size:11px}
+  .badge.game{background:#663390}
+  .badge.star{background:#8c5c15;color:#ffe79c}
+  .badge.game svg{width:15px;height:12px}
+  .row{height:180px;padding:0 16px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+  .card{height:180px;border:1px solid var(--line);border-radius:4px;background:#fffdf8}
+  .art>svg{display:block;width:100%;height:74px;border-radius:3px 3px 0 0}
+  .card-copy{padding:2px 8px 0;display:grid;gap:1px;align-content:start}
+  .row-secondary .art>svg{height:88px}
+  .card-games .art>svg{height:76px}
+  .card-games .card-copy{padding-top:0}
+  .card h3{font-size:18px;line-height:18px}
+  .card .summary{font-size:13px;line-height:13px}
+  .fact{justify-self:start;color:var(--navy);border:1px solid #63748e;border-radius:2px;padding:0 5px;margin-top:1px}
+  .bottom{height:84px;padding:0 16px 6px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .mini{display:grid;grid-template-columns:56px 1fr;align-items:center;gap:11px;padding:6px 10px;border-top:2px solid #a78d53;background:#f1eadb}
+  .mini svg{display:block;width:54px;height:54px}
+  .mini h3{font-size:17px;line-height:20px;margin-bottom:2px}
+  .mini p{font-size:13px;line-height:16px;max-width:320px}
+  .footer{height:40px;display:grid;place-items:center;border-top:1px solid var(--navy);color:#474c55;font-size:13px}
+</style>
+</head>
+<body>
+<header class="header">
+  <p>THE WORLD IN ONE IMAGE</p>
+  <h1>THURSDAY 19 NOVEMBER 2026</h1>
+</header>
+
+<section class="map-band" aria-labelledby="map-heading">
+  <h2 id="map-heading">SEVEN PLACES · NINE STORIES · ONE DAY</h2>
+  <svg class="map" viewBox="0 0 1024 188" role="img" aria-label="World map locating the seven numbered places covered in this edition">
+    <defs>
+      <pattern id="grid" width="85" height="28" patternUnits="userSpaceOnUse"><path d="M85 0H0V28" fill="none" stroke="#fff" stroke-opacity=".8"/></pattern>
+      <g id="map-pin"><circle cy="2" r="14" fill="#16294d" opacity=".16"/><circle r="13" fill="#c0392b" stroke="#fff" stroke-width="2"/></g>
+    </defs>
+    <path fill="url(#grid)" d="M0 0h1024v188H0z"/>
+    <path class="land" id="north-america" d="M12 26l18-5 23 2 16-7 18 1 19-8 26 4 14-8 31 1 17 7 14-8 19 1 5 8-13 5-5 10 10 9 19 2 9-8-9-8 5-10 14-6 15 2 10 11 16 9 4 10-15 5-13 9 7 8-8 7-3 7-11 4-9 9-14 5-1 11-5 2-7-11-14-3-20 3-7 8 5 11 13 3 10-6 9 4-8 6-8 2 5 6 17 5 6 8 11 5-7 4-10-5-6-8-15-2-16-8-13-9-12-3-13-8-11-12-8-3 3 11-4 2-9-11-9-14-4-11-13-11-5-11 4-12-12-3-11 4-16 2-12 6-20 1-18 7-15-2 17-8 21-7z"/>
+    <path class="land" d="M216 4l11-4h21l-5 7-11 4-10-1zm33-4h29l-5 5-17 3-8-3zm36 0h76l-3 9-12 8-7 10-14 10-11 1-5-11-12-7-6-10zM287 93l18-1 8 4-4 3-16-1zm23 9 13 1 4 4-13-1zm18 5 11 2-5 3-6-2z"/>
+    <path class="land" id="south-america" d="M286 129l10-9 15-6 14 3 12-2 14 6 6 7 17 3 17 8-5 8-12 5-7 10-14 5-8 7-13 2-4 7 7 5h-16l-8-5-4-9 1-9-8-9-2-8-12-8z"/>
+    <path class="land" d="M412 28l8-4 13 1 3 4-11 4-10-1zm49 17 5-5 6 3-1 7 6 5-1 7-9 1-2-7-4-2zm-10 8 7-3 3 4-2 6-8-1z"/>
+    <path class="land" id="eurasia" d="M466 67l10-4 5-6 11-2 5-7 13 1 5-6-7-7 7-9 7-2 4-10 15-8 13-2-2 9-8 4-6 9-1 11 7 4 8-4 4-8 11-2 7-9 16 1 7-8 16 4 11-8 20-1 13 5 9-10h24l8 5 16-4 19 5 12-4 21 4 20-4 17 5 15-5 13 6 21-5 12 4 20-3 13 7 20-2 12 8 20-2 11 6 20-2v14l-22 4-10-2-12 5-17-4-12 5-9 11-9 3-7 11-8 5-5-8 5-9-13-1-9 8 5 7-3 9-9 1-4-7-10 7-4 9-12 6-9-1-10 5-5 8-2 9-7 9-2 9 6 9-3 5-7-5-5-10-6-9-3-11-8-9-12-6-8 2 1 10-8 11-9 7-4 11-4 2-8-10-7-11-5-10-11-6-8-8-7-1-8 7-10-2-8-8-9-1-7-10-12-2-9-7-11 2-10-3-7-8-10 2-7-5-9 2-5 6-15-1-7 5 3 6-6 2-5-5-8-1-6-9-7-2-4 3 6 7-3 3-8-4-5-7-10-1-5 6-11 1-13-3 3-8-3-4z"/>
+    <path class="land" id="india" d="M704 77l19 4 16 11 10 12 8 13 2 8-8 7-11-4-7-9-5-10-7-9-11-7-6-8z"/>
+    <path fill="#dceaf2" stroke="#fffdf7" stroke-width=".8" d="M580 44l10-3 13 2 4 4-7 4-13-1-7-3zm51 1 6-3 6 3-1 5 4 6-4 5-5-2-1-7z"/>
+    <path class="land" id="africa" d="M468 89l7-7 14-4 11 2 9 6 12-2 13 5 11-1 10 4 12-1 8 9 5 10 9 12 14-3-6 9-14 8-7 10-1 10-8 5-3 10-11 8-11 2-9-5-6-11-5-10-2-12-10-5-8-9-16 2-14-2-8-6-5-9 2-9z"/>
+    <path class="land" id="arabia" d="M586 85l9-3 17 4 10-7 6 7 6 4 6 10 13 2 14-5 13-4-3 8-11 7-7 8-15 4-20 6-12-1-9-10-6-11z"/>
+    <path class="land" d="M599 153l7-6 2 5-3 12-6 8-5-3zm278-66 4-5 2 6-3 6-5 2zm32-24 5-6 5 1-1 6-8 4-2 8-9 6-6-1 2-4 9-6zm-67 53 5-3 6 5-2 5 6 7-4 4-7-6zm-40 22 9 5 8 10 9 5-4 3-11-5-6-8zm27 24 10-1 13 2 7 4-11 1-13-2zm20-21 9-4 6 5-4 11-10 2-7-7zm20 19 6-7 8 4 7-2 7 6-6 4-10-2-4 4zm26-7 11-3 15 4 8 8-12-1-8-4-10 1z"/>
+    <path class="land" d="M899 188l5-10 15-4 11-7 13-3 8 4 11-4 2-7 5 2 4 10 8 3 8 10 4 6zm105-4 6-5 8 1-6 8h-12z"/>
+    <path fill="#fffdf7" opacity=".72" d="M0 187l30-3 28 2 38-3 40 3 32-2 32 4H0zm385 1 38-4 39 1 27-2 34 3 44-2 38 4zm286 0 41-4 32 2 25-3 46 5z"/>
+    <g class="lead">
+      <path d="M850 88h9M606 62h16M633 103l-16 14h-25M694 96h10M592 24v-6M279 55l-15-8h-14M776 128l16 18h11"/>
+    </g>
+    <g transform="translate(836 88)"><use href="#map-pin"/><text class="map-number">1</text></g>
+    <g transform="translate(622 62)"><use href="#map-pin"/><text class="map-number">2</text></g>
+    <g transform="translate(640 92)"><use href="#map-pin"/><text class="map-number">3</text></g>
+    <g transform="translate(682 96)"><use href="#map-pin"/><text class="map-number">4</text></g>
+    <g transform="translate(592 38)"><use href="#map-pin"/><text class="map-number">5</text></g>
+    <g transform="translate(288 66)"><use href="#map-pin"/><text class="map-number">6</text></g>
+    <g transform="translate(767 118)"><use href="#map-pin"/><text class="map-number">7</text></g>
+    <g class="map-label">
+      <text x="864" y="92">SHENZHEN</text><text x="604" y="66" text-anchor="end">KUWAIT</text>
+      <text x="589" y="121" text-anchor="end">BAHRAIN</text><text x="708" y="100">QESHM</text>
+      <text x="592" y="14" text-anchor="middle">CRIMEA</text><text x="247" y="50" text-anchor="end">WASHINGTON</text>
+      <text x="807" y="150">INDIA COAST</text>
+    </g>
+  </svg>
+</section>
+
+<section class="hero" aria-labelledby="hero-heading">
+  <figure>
+    <svg viewBox="0 0 448 184" preserveAspectRatio="none" role="img" aria-label="American, Chinese and Russian flags above the Shenzhen skyline at sunset">
+      <defs>
+        <linearGradient id="sunset" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#df755d"/><stop offset=".63" stop-color="#f3ab73"/><stop offset="1" stop-color="#ffd8a2"/></linearGradient>
+        <pattern id="windows" width="11" height="10" patternUnits="userSpaceOnUse"><path d="M2 2h4v3H2z" fill="#ffd475"/><path d="M8 2h1v3H8z" fill="#f8a760" opacity=".7"/></pattern>
+        <pattern id="stripes" width="1" height="16" patternUnits="userSpaceOnUse"><path d="M0 0h1v8H0z" fill="#bd323a"/></pattern>
+        <path id="flag-star" d="M0-8 1.9-2.5 7.6-2.5 3 1 4.7 6.5 0 3.2-4.7 6.5-3 1-7.6-2.5-1.9-2.5z"/>
+        <path id="towers" d="M0 184v-31h18v-11h18v42zm39 0v-41l8-5v-11h17v57zm30 0v-25h24v-11h14v36zm41 0v-55h9v-8h13v8h7v55zm34 0v-39h20v-11h12v50zm42 0v-31h26v31zm33 0v-56l9-9h16l8 9v56zm39 0v-64h6v-11h6v-13h3v13h6v11h6v64zm33 0v-41h19v-8h7v49zm30 0v-51h27v51zm33 0v-37h21v-8h7v45zm34 0v-42h8v-11h18v11h6v42zm35 0v-31h25v31z"/>
+      </defs>
+      <path d="M0 0h448v184H0z" fill="url(#sunset)"/>
+      <circle cx="220" cy="146" r="38" fill="#ffdf91"/>
+      <path d="M0 158l23-11 16 4 26-12 27 8 18-9 21 7 37-11 22 8 39 7 24-10 23 6 22-10 20 8 28-10 26 10 19-9 29 4 28-9v55H0z" fill="#b86b69"/>
+      <path d="M0 167h448m0 7H0" stroke="#f7b483" opacity=".7"/>
+      <g stroke="#803c50" fill="none" stroke-width="1.6" stroke-linecap="round"><path d="M158 114q4-3 8 1 3-5 8-4m-4-8q3-2 6 1 2-3 6-3m171 18q4-4 9 0 4-4 8-2"/></g>
+      <g stroke="#534053" stroke-width="3.5"><path d="M35 15v151M160 13v153M285 16v150"/></g>
+      <g fill="#ffe9b0"><circle cx="35" cy="15" r="3"/><circle cx="160" cy="13" r="3"/><circle cx="285" cy="16" r="3"/></g>
+      <g transform="translate(37 19)">
+        <path fill="#fff5e6" d="M0 0h112v104H0z"/><path fill="url(#stripes)" d="M0 0h112v104H0z"/><path fill="#233a64" d="M0 0h49v56H0z"/>
+        <g fill="#fff5e6"><g id="us-stars"><use href="#flag-star" transform="translate(9 8) scale(.39)"/><use href="#flag-star" transform="translate(24 8) scale(.39)"/><use href="#flag-star" transform="translate(39 8) scale(.39)"/><use href="#flag-star" transform="translate(16 18) scale(.39)"/><use href="#flag-star" transform="translate(31 18) scale(.39)"/></g><use href="#us-stars" y="20"/><use href="#us-stars" y="39"/></g>
+      </g>
+      <g transform="translate(162 17)"><path fill="#ce302b" d="M0 0h112v104H0z"/><g fill="#ffde62"><use href="#flag-star" transform="translate(24 28) scale(1.55)"/><use href="#flag-star" transform="translate(42 14) rotate(25) scale(.48)"/><use href="#flag-star" transform="translate(50 23) rotate(12) scale(.48)"/><use href="#flag-star" transform="translate(49 35) rotate(-12) scale(.48)"/><use href="#flag-star" transform="translate(41 44) rotate(-24) scale(.48)"/></g></g>
+      <g transform="translate(287 20)"><path fill="#fff5e6" d="M0 0h112v35H0z"/><path fill="#244c92" d="M0 35h112v34H0z"/><path fill="#cd383b" d="M0 69h112v35H0z"/></g>
+      <use href="#towers" fill="#41446a"/><use href="#towers" fill="url(#windows)"/>
+      <path d="M0 182h448v2H0z" fill="#263754"/>
+    </svg>
+    <span class="badge">1</span>
+    <figcaption>The first trilateral of the three leaders — illustration</figcaption>
+  </figure>
+  <div class="hero-text">
+    <p class="kicker">ASIA · SHENZHEN</p>
+    <h2 id="hero-heading">Trump, Xi and Putin meet in Shenzhen — a first</h2>
+    <p class="summary">Xi Jinping hugged Donald Trump on the tarmac as he arrived in Shenzhen for Thursday's trilateral with Vladimir Putin — the first meeting of the three leaders, with nuclear arms control at the top of the agenda. Xi and Putin met first, denouncing protectionism and sanctions at the APEC summit.</p>
+    <div class="stats"><span>3 LEADERS</span><span>1ST TRILATERAL</span><span>NUCLEAR ARMS CONTROL</span></div>
+  </div>
+</section>
+
+<section class="row" aria-label="Middle East, Europe and United States news">
+  <article class="card">
+    <div class="art">
+      <svg viewBox="0 0 320 78" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="dust" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#de805b"/><stop offset="1" stop-color="#ffd297"/></linearGradient>
+          <g id="drone" fill="#242b42">
+            <path d="M-34-6h16l12 4H6l12-4h16v4L15 2l-7 5H-8l-7-5-19-4z"/><path d="M-9 0q0-5 5-6h8q5 1 5 6l-3 8H-6z"/>
+            <path d="M-28-10v7m56-7v7M-41-10h26m30 0h26" stroke="#242b42" stroke-width="2.5" stroke-linecap="round"/><path d="M-6 3H6" stroke="#ffbc71" stroke-width="1.5"/>
+          </g>
+        </defs>
+        <path d="M0 0h320v78H0z" fill="url(#dust)"/>
+        <path d="M0 65l30-10 30 2 26-9 37 11 38-6 39 5 40-12 30 4 50-8v36H0z" fill="#bd6b59"/>
+        <path d="M2 44l53-11m33 9 37-12m6 31 65-16m18-13 39-12m-25 20 31-8" stroke="#ffebbb" stroke-width="2" opacity=".85"/>
+        <use href="#drone" transform="translate(76 30) scale(1.02)"/><use href="#drone" transform="translate(162 43) scale(1.18)"/><use href="#drone" transform="translate(260 22) scale(1.18)"/>
+        <path d="M0 68h19v-6h47v16H0zm195 10V66h22v-6h30v18zm54 0V64h16l10-9 10 9h22v-7h13v21z" fill="#414159"/>
+        <path d="M98 52l31 10q-17 16-31-10z" fill="#34364b"/><path d="M112 63l-6 13h15l-5-12m-2-7 10-10" stroke="#34364b" stroke-width="2" fill="#34364b"/><path d="M23 66h32m167 0h19m42 3h15" stroke="#ffcb86" opacity=".85"/>
+      </svg>
+      <span class="badge group">2·3·4</span>
+    </div>
+    <div class="card-copy"><p class="kicker">MIDDLE EAST · CONFLICT</p><h3>Iran widens Gulf attacks; US hit back on Qeshm</h3><p class="summary">Iran fired drones at a US base in Kuwait and again at Bahrain on Wednesday. US jets had struck an IRGC missile site on Qeshm Island on Tuesday.</p></div>
+  </article>
+  <article class="card">
+    <div class="art">
+      <svg viewBox="0 0 320 78" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 0h320v78H0z" fill="#b9d5e3"/><path d="M0 49l40-9 43 5 50-4 45 5 62-6 39 5 41-6v39H0z" fill="#8db4ca"/><path d="M0 55h320v23H0z" fill="#477e9e"/><path d="M0 70h60m29-7h43m86 6h53m13-10h36M10 60h22m171 15h39" stroke="#a6d8e1" stroke-width="1.4"/>
+        <g stroke="#ae493d" fill="none"><path d="M-8 42Q34-10 77 42Q109 1 145 42m43 0Q220 0 252 42Q289-8 329 42" stroke-width="5"/><path d="M15 24v18m18-24v24m19-21v21m43-16v16m17-20v20m16-15v15m74-15v15m17-21v21m17-15v15m35-20v20m18-26v26m16-21v21" stroke-width="2.2"/></g>
+        <path d="M158 36l-9-16 14 5 3-18 8 17 14-8-5 16 15 3-17 8-1 13-10-11-17 7 6-13-13-3z" fill="#f3873b"/><path d="M163 36l-3-7 8 4 3-11 3 11 9-3-5 8 4 6-11-4-7 4z" fill="#ffe38c"/>
+        <path d="M0 39h145l8 4-9 2H0zm190 0h130v6H190l-7-2zM34 45h8v17h-8zm80 0h8v16h-8zm105 0h8v17h-8zm65 0h8v17h-8z" fill="#593e4b"/>
+        <path d="M139 57l50 10-2 6-50-11z" fill="#593e4b"/><path d="M131 70h24m21 5h26" stroke="#d7eced" stroke-width="2"/>
+      </svg>
+      <span class="badge">5</span>
+    </div>
+    <div class="card-copy"><p class="kicker">EUROPE · WAR</p><h3>Crimean Bridge attacked again</h3><p class="summary">A Russian official said the Kerch Bridge was attacked again on Thursday, days after a strike collapsed its road arch into the strait. Zelenskyy hailed an 'unprecedented operation'.</p></div>
+  </article>
+  <article class="card">
+    <div class="art">
+      <svg viewBox="0 0 320 78" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 0h320v78H0z" fill="#c8e0eb"/><path d="M0 60h320v18H0z" fill="#b0cfdf"/>
+        <g fill="#fff7e4"><use href="#flag-star" transform="translate(65 26) scale(1.1)"/><use href="#flag-star" transform="translate(89 14) scale(.55)"/><use href="#flag-star" transform="translate(250 21) scale(1.1)"/><use href="#flag-star" transform="translate(277 38) scale(.68)"/><use href="#flag-star" transform="translate(44 42) scale(.54)"/></g>
+        <path d="M0 78V70h42v-9h45v-8h19C112 27 133 18 153 16v-5h5V4h4v7h5v5c20 2 41 11 47 37h19v8h45v9h42v8z" fill="#405d7b"/>
+        <path d="M113 49h94v4h-94zm-17 9h128v4H96zm-42 9h212v3H54z" fill="#e9e9dc"/>
+        <path d="M123 48q7-23 30-29m-15 29q3-18 17-28m42 28q-7-23-30-29m15 29q-3-18-17-28m-5 29V20" fill="none" stroke="#9ab9cc" stroke-width="1.6"/>
+        <path d="M107 62h5v15h-5zm16 0h5v15h-5zm16 0h5v15h-5zm16 0h5v15h-5zm16 0h5v15h-5zm16 0h5v15h-5zm16 0h5v15h-5z" fill="#f3ead5"/>
+      </svg>
+      <span class="badge">6</span>
+    </div>
+    <div class="card-copy"><p class="kicker">USA · POLITICS</p><h3>Jeffries set to be first Black Speaker</h3><p class="summary">Democrats nominated Hakeem Jeffries to be Speaker of the House — he would be the first African-American to hold the post. The vote follows the midterm shake-up.</p></div>
+  </article>
+</section>
+
+<section class="row row-secondary" aria-label="Weather, games and science news">
+  <article class="card">
+    <div class="art">
+      <svg viewBox="0 0 320 78" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 0h320v78H0z" fill="#367e99"/><path d="M0 0h162l-9 9-15 5-7 11-18 5-14 14-9 3-12 15-9 4-3 12H0z" fill="#d9d5a5" stroke="#f5e9c4" stroke-width="2"/>
+        <path d="M0 37l39-11 20 8 20-12 28-4 17-12 16-6H0z" fill="#a7bc99"/>
+        <path d="M146 64c38 17 117 12 137-21 10-17-11-32-48-41M113 43c2-18 24-34 54-39M258 76c31-8 48-20 53-36" stroke="#83c0cb" stroke-width="2" stroke-dasharray="10 5" fill="none"/>
+        <path d="M139 59c23 18 77 14 101 1 24-12 26-31 4-43-26-14-71-12-94 0 24-6 60-6 79 5 21 12 11 28-12 35-26 8-61 5-78 2zm74-30c-12-9-40-7-53 2-16 10-9 23 14 26 14 2 33-1 42-7-15 4-36 4-44-2-9-8 6-16 21-17 8-1 14-1 20-2z" fill="#e7f4ec"/>
+        <ellipse cx="197" cy="40" rx="7" ry="3.4" fill="#c3e4e7"/>
+      </svg>
+      <span class="badge">7</span>
+    </div>
+    <div class="card-copy"><p class="kicker">WEATHER · INDIA</p><h3>Cyclone Akvan nears India's east coast</h3><p class="summary">Storm expected to cross between Machilipatnam and Puri.</p><span class="fact">MACHILIPATNAM – PURI</span></div>
+  </article>
+  <article class="card card-games">
+    <div class="art">
+      <svg viewBox="0 0 320 78" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <linearGradient id="vice" x2="0" y2="1" gradientUnits="objectBoundingBox"><stop stop-color="#613d8c"/><stop offset=".55" stop-color="#d06d9e"/><stop offset="1" stop-color="#ffad6e"/></linearGradient>
+          <pattern id="neon-windows" width="8" height="7" patternUnits="userSpaceOnUse"><path fill="#fb9ac8" d="M2 2h3v2H2z"/></pattern>
+          <path id="vice-towers" d="M0 73V43h24v30zm26 0V34h18v-8h15v47zm37 0V46h23v27zm27 0V18h8v-6h16v6h7v55zm35 0V32h28v41zm32 0V41h21v32zm25 0V19h12v-8h9v8h13v54zm40 0V29h25v44zm29 0V45h16v28zm19 0V36h20v37zm25 0V50h25v23z"/>
+          <path id="palm" d="M0 0q8 16 8 44h5Q12 16 4 1 15-7 24 4 17-14 4-5 10-14 16-13 5-19 1-6-8-18-19-10-9-11-3-4-18-9-24 5-16 0-5 1-16 5-14 17-8 7 0 0z"/>
+        </defs>
+        <path d="M0 0h320v78H0z" fill="url(#vice)"/><circle cx="164" cy="44" r="29" fill="#ffc485"/><path d="M0 53h320m-320 8h320" stroke="#ffb98b" opacity=".8"/>
+        <use href="#vice-towers" fill="#442454"/><use href="#vice-towers" fill="url(#neon-windows)"/>
+        <path d="M0 70h320v8H0z" fill="#291e44"/><g fill="#271c3a"><use href="#palm" transform="translate(53 36) scale(.86)"/><use href="#palm" transform="translate(279 29) scale(1.02)"/><use href="#palm" transform="translate(306 47) scale(-.65 .65)"/></g>
+        <path d="M95 18h20m72 1h24m13 11h20M5 73h310" stroke="#f29bc5" stroke-width="1.2"/>
+      </svg>
+      <span class="badge game" aria-label="Games"><svg viewBox="0 0 18 14" aria-hidden="true"><path fill="#fff" d="M4 2h10q2 0 2.7 2.7l1 4.6q.5 2.7-2 2.7-1 0-3.2-2h-7Q3 12 2 12q-2.5 0-1.8-2.7l1-4.6Q2 2 4 2z"/><path stroke="#663390" stroke-width="1.4" d="M3 6h5M5.5 3.5v5m6.5-2h1.5m.8-1.5h1.5"/></svg></span>
+    </div>
+    <div class="card-copy"><p class="kicker">CULTURE · GAMES</p><h3>GTA VI arrives after a 13-year wait</h3><p class="summary">Grand Theft Auto VI began its global rollout, returning players to Vice City. After 13 years, launch-day hype is enormous — the biggest entertainment release of the year.</p><span class="fact">VICE CITY RETURNS</span></div>
+  </article>
+  <article class="card">
+    <div class="art">
+      <svg viewBox="0 0 320 78" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 0h320v78H0z" fill="#162441"/>
+        <g fill="#a7bfdc"><circle cx="38" cy="54" r="1.5"/><circle cx="65" cy="18" r="1"/><circle cx="88" cy="42" r="1.8"/><circle cx="111" cy="11" r="1.1"/><circle cx="211" cy="12" r="1.5"/><circle cx="246" cy="26" r="1.2"/><circle cx="280" cy="20" r="1"/><circle cx="307" cy="45" r="1.5"/><circle cx="265" cy="69" r="1.5"/><circle cx="109" cy="67" r="1"/><circle cx="79" cy="66" r="1"/></g>
+        <path d="M21 52q76 9 145-18 64-25 132-18" fill="none" stroke="#8493b7" stroke-width="1" stroke-dasharray="2 5" opacity=".65"/>
+        <path d="M169 48l68 13 23-11m-89-3 38-28 23-1m-70 30-43 27m64-19 28 10" fill="none" stroke="#bac9d2" stroke-width="2"/>
+        <path d="M168 35l19 8 1 16-22 5-15-10 2-12z" fill="#bd8640"/><path d="M168 35l19 8-21 5-13-6z" fill="#f3cf7e"/><path d="M166 48v16l-15-10 2-12z" fill="#896843"/>
+        <path d="M117 15q-16 19 5 35 18 13 44 4L117 15z" fill="#90a9be"/><ellipse cx="142" cy="34" rx="32" ry="11" transform="rotate(38 142 34)" fill="#f2ecdc"/><path d="M159 43l-32-29m-4-4 8 4-4 5z" stroke="#657d9b" stroke-width="2" fill="#f0c46d"/>
+        <g stroke="#ffd78a" stroke-width="1.2"><path d="M56 32v10m-5-5h10m185 8v10m-5-5h10M292 51v8m-4-4h8"/></g>
+      </svg>
+      <span class="badge star" aria-label="Science">★</span>
+    </div>
+    <div class="card-copy"><p class="kicker">SCIENCE</p><h3>Voyager 1 reaches one light-day</h3><p class="summary">Nearly 50 years out, the probe is a light-day from Earth — a first. NASA confirms Thursday.</p><span class="fact">NEARLY 50 YEARS OUT</span></div>
+  </article>
+</section>
+
+<section class="bottom" aria-label="Economy and arts news">
+  <article class="mini">
+    <svg viewBox="0 0 54 54" aria-hidden="true">
+      <rect x=".5" y=".5" width="53" height="53" rx="4" fill="#e2eadc" stroke="#9db59f"/><path d="M10 10v34h35M10 33h35M10 22h35M10 11h35M22 11v33m11-33v33m11-33v33" stroke="#a3b9aa" fill="none"/><path d="M10 40l10-9 7 4 9-12 8-8m-7 1 7-1-1 8" stroke="#24714e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    </svg>
+    <div><h3>Fed minutes: more hikes likely</h3><p>Most officials expect further rate rises if inflation stays hot, October minutes show.</p></div>
+  </article>
+  <article class="mini">
+    <svg viewBox="0 0 54 54" aria-hidden="true">
+      <rect x="3" y="1" width="48" height="52" rx="2" fill="#a36d27"/><path d="M5 3h44v48H5z" fill="#f0c66a"/><path d="M9 7h36v40H9z" fill="#f4dfa3" stroke="#b38235"/><path d="M10 39h34v7H10z" fill="#d6a95a"/><path d="M27 38l-7-17m7 17 1-23m-1 23 10-17m-10 12-11-4m12 5 9-6" fill="none" stroke="#5e7341" stroke-width="1.5"/>
+      <g fill="#dc922b"><circle cx="19" cy="20" r="6"/><circle cx="28" cy="15" r="6"/><circle cx="37" cy="21" r="5"/><circle cx="16" cy="28" r="4"/><circle cx="36" cy="29" r="4"/></g><g fill="#875227"><circle cx="19" cy="20" r="2.6"/><circle cx="28" cy="15" r="2.6"/><circle cx="37" cy="21" r="2.2"/><circle cx="16" cy="28" r="1.6"/><circle cx="36" cy="29" r="1.6"/></g><path d="M22 33h11l-1 3q5 6 0 8H23q-5-2 0-8z" fill="#b97935"/>
+    </svg>
+    <div><h3>Van Gogh sells for record $190.4m</h3><p>Sale sets a record for the artist despite a row over its Nazi-era history.</p></div>
+  </article>
+</section>
+
+<footer class="footer">Events reported Thursday 19 November 2026 · Sources: BBC, Reuters, AP, NYT</footer>
+</body>
+</html>
